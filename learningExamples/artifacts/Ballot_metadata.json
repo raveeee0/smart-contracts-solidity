@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "toVoter",
+						"type": "address"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "winningProposal",
+				"outputs": [
+					{
+						"name": "_winningProposal",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "toProposal",
+						"type": "uint8"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_numProposals",
+						"type": "uint8"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"learningExamples/ballotV1.sol": "Ballot"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"learningExamples/ballotV1.sol": {
+			"keccak256": "0xf76a9260c2c7716503f27543ea583b58bfc42aad6708bf63b897c985aae0b76d",
+			"urls": [
+				"bzzr://d7980f2881991d5834d2925cf5100c5a8939c16a169d52c0985b94dcf3b0a035"
+			]
+		}
+	},
+	"version": 1
+}

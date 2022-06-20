@@ -1,0 +1,756 @@
+{
+	"id": "ff14e9818a1b4c4bbfa6e89508915153",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.4.26",
+	"solcLongVersion": "0.4.26+commit.4563c3fc",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"learningExamples/ballotV1.sol": {
+				"content": "pragma solidity ^0.4.0;\n\ncontract Ballot {\n\n    /* Voter structure */\n    struct Voter {\n        uint weight; // Value of the vote\n        bool voted;\n        uint8 vote;\n    }\n\n\n    struct Proposal{\n        uint voteCount;\n    }\n\n    address chairperson;\n    mapping(address => Voter) voters;\n    Proposal[] proposals;\n\n    constructor(uint8 _numProposals) public {\n        \n    }\n\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"learningExamples/ballotV1.sol": {
+				"Ballot": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"name": "_numProposals",
+									"type": "uint8"
+								}
+							],
+							"payable": false,
+							"stateMutability": "nonpayable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"methods": {}
+					},
+					"evm": {
+						"assembly": "    /* \"learningExamples/ballotV1.sol\":25:384  contract Ballot {... */\n  mstore(0x40, 0x80)\n    /* \"learningExamples/ballotV1.sol\":325:381  constructor(uint8 _numProposals) public {... */\n  callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    /* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":30:31   */\n  0x0\n    /* \"--CODEGEN--\":27:28   */\n  dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\ntag_1:\n    /* \"learningExamples/ballotV1.sol\":325:381  constructor(uint8 _numProposals) public {... */\n  pop\n  mload(0x40)\n  0x20\n  dup1\n  bytecodeSize\n  dup4\n  codecopy\n  dup2\n  add\n  dup1\n  0x40\n  mstore\n  dup2\n  add\n  swap1\n  dup1\n  dup1\n  mload\n  swap1\n  0x20\n  add\n  swap1\n  swap3\n  swap2\n  swap1\n  pop\n  pop\n  pop\n  pop\n    /* \"learningExamples/ballotV1.sol\":25:384  contract Ballot {... */\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x0\n  codecopy\n  0x0\n  return\nstop\n\nsub_0: assembly {\n        /* \"learningExamples/ballotV1.sol\":25:384  contract Ballot {... */\n      mstore(0x40, 0x80)\n      0x0\n      dup1\n      revert\n\n    auxdata: 0xa165627a7a723058209509d81eb74d5fc790677ffeb7d232191a3e1de33d110cde0961211a5ce86f260029\n}\n",
+						"bytecode": {
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b5060405160208060748339810180604052810190808051906020019092919050505050603580603f6000396000f3006080604052600080fd00a165627a7a723058209509d81eb74d5fc790677ffeb7d232191a3e1de33d110cde0961211a5ce86f260029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x40 MLOAD PUSH1 0x20 DUP1 PUSH1 0x74 DUP4 CODECOPY DUP2 ADD DUP1 PUSH1 0x40 MSTORE DUP2 ADD SWAP1 DUP1 DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP POP PUSH1 0x35 DUP1 PUSH1 0x3F PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN STOP PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SWAP6 MULMOD 0xd8 0x1e 0xb7 0x4d 0x5f 0xc7 SWAP1 PUSH8 0x7FFEB7D232191A3E SAR 0xe3 RETURNDATASIZE GT 0xc 0xde MULMOD PUSH2 0x211A 0x5c 0xe8 PUSH16 0x26002900000000000000000000000000 ",
+							"sourceMap": "25:359:0:-;;;325:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;325:56:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;25:359;;;;;;"
+						},
+						"deployedBytecode": {
+							"linkReferences": {},
+							"object": "6080604052600080fd00a165627a7a723058209509d81eb74d5fc790677ffeb7d232191a3e1de33d110cde0961211a5ce86f260029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT STOP LOG1 PUSH6 0x627A7A723058 KECCAK256 SWAP6 MULMOD 0xd8 0x1e 0xb7 0x4d 0x5f 0xc7 SWAP1 PUSH8 0x7FFEB7D232191A3E SAR 0xe3 RETURNDATASIZE GT 0xc 0xde MULMOD PUSH2 0x211A 0x5c 0xe8 PUSH16 0x26002900000000000000000000000000 ",
+							"sourceMap": "25:359:0:-;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "10600",
+								"executionCost": "158",
+								"totalCost": "10758"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH",
+									"value": "80"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "CALLVALUE"
+								},
+								{
+									"begin": 8,
+									"end": 17,
+									"name": "DUP1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "ISZERO"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "PUSH [tag]",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPI"
+								},
+								{
+									"begin": 30,
+									"end": 31,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 28,
+									"name": "DUP1"
+								},
+								{
+									"begin": 20,
+									"end": 32,
+									"name": "REVERT"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "tag",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPDEST"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "POP"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "MLOAD"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "PUSH",
+									"value": "20"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "PUSHSIZE"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP4"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP2"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "ADD"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP2"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "ADD"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "DUP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "MLOAD"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "PUSH",
+									"value": "20"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "ADD"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP3"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP2"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "SWAP1"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "POP"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "POP"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "POP"
+								},
+								{
+									"begin": 325,
+									"end": 381,
+									"name": "POP"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH #[$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "DUP1"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH [$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 25,
+									"end": 384,
+									"name": "RETURN"
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a165627a7a723058209509d81eb74d5fc790677ffeb7d232191a3e1de33d110cde0961211a5ce86f260029",
+									".code": [
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "PUSH",
+											"value": "80"
+										},
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "PUSH",
+											"value": "40"
+										},
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "MSTORE"
+										},
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "DUP1"
+										},
+										{
+											"begin": 25,
+											"end": 384,
+											"name": "REVERT"
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.4.26+commit.4563c3fc\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"name\":\"_numProposals\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"learningExamples/ballotV1.sol\":\"Ballot\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"learningExamples/ballotV1.sol\":{\"keccak256\":\"0x0f6096e810be08123198b556d6631e4544ea6be88a41aefc77372ee3d13b1012\",\"urls\":[\"bzzr://261060ac5d281e47901a808d1c7c771330a881fb8a80bd3c1eb15233b9fb738d\"]}},\"version\":1}",
+					"userdoc": {
+						"methods": {}
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"formattedMessage": "learningExamples/ballotV1.sol:21:17: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.\n    constructor(uint8 _numProposals) public {\n                ^-----------------^\n",
+				"message": "Unused function parameter. Remove or comment out the variable name to silence this warning.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 356,
+					"file": "learningExamples/ballotV1.sol",
+					"start": 337
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"learningExamples/ballotV1.sol": {
+				"ast": {
+					"absolutePath": "learningExamples/ballotV1.sol",
+					"exportedSymbols": {
+						"Ballot": [
+							27
+						]
+					},
+					"id": 28,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.4",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "0:23:0"
+						},
+						{
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": null,
+							"fullyImplemented": true,
+							"id": 27,
+							"linearizedBaseContracts": [
+								27
+							],
+							"name": "Ballot",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "Ballot.Voter",
+									"id": 8,
+									"members": [
+										{
+											"constant": false,
+											"id": 3,
+											"name": "weight",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "97:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 2,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "97:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 5,
+											"name": "voted",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "139:10:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "139:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"name": "vote",
+											"nodeType": "VariableDeclaration",
+											"scope": 8,
+											"src": "159:10:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint8",
+												"typeString": "uint8"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "uint8",
+												"nodeType": "ElementaryTypeName",
+												"src": "159:5:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint8",
+													"typeString": "uint8"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										}
+									],
+									"name": "Voter",
+									"nodeType": "StructDefinition",
+									"scope": 27,
+									"src": "74:102:0",
+									"visibility": "public"
+								},
+								{
+									"canonicalName": "Ballot.Proposal",
+									"id": 11,
+									"members": [
+										{
+											"constant": false,
+											"id": 10,
+											"name": "voteCount",
+											"nodeType": "VariableDeclaration",
+											"scope": 11,
+											"src": "208:14:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 9,
+												"name": "uint",
+												"nodeType": "ElementaryTypeName",
+												"src": "208:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"value": null,
+											"visibility": "internal"
+										}
+									],
+									"name": "Proposal",
+									"nodeType": "StructDefinition",
+									"scope": 27,
+									"src": "183:46:0",
+									"visibility": "public"
+								},
+								{
+									"constant": false,
+									"id": 13,
+									"name": "chairperson",
+									"nodeType": "VariableDeclaration",
+									"scope": 27,
+									"src": "235:19:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 12,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "235:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"value": null,
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 17,
+									"name": "voters",
+									"nodeType": "VariableDeclaration",
+									"scope": 27,
+									"src": "260:32:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_mapping$_t_address_$_t_struct$_Voter_$8_storage_$",
+										"typeString": "mapping(address => struct Ballot.Voter)"
+									},
+									"typeName": {
+										"id": 16,
+										"keyType": {
+											"id": 14,
+											"name": "address",
+											"nodeType": "ElementaryTypeName",
+											"src": "268:7:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											}
+										},
+										"nodeType": "Mapping",
+										"src": "260:25:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_mapping$_t_address_$_t_struct$_Voter_$8_storage_$",
+											"typeString": "mapping(address => struct Ballot.Voter)"
+										},
+										"valueType": {
+											"contractScope": null,
+											"id": 15,
+											"name": "Voter",
+											"nodeType": "UserDefinedTypeName",
+											"referencedDeclaration": 8,
+											"src": "279:5:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_Voter_$8_storage_ptr",
+												"typeString": "struct Ballot.Voter"
+											}
+										}
+									},
+									"value": null,
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 20,
+									"name": "proposals",
+									"nodeType": "VariableDeclaration",
+									"scope": 27,
+									"src": "298:20:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_array$_t_struct$_Proposal_$11_storage_$dyn_storage",
+										"typeString": "struct Ballot.Proposal[]"
+									},
+									"typeName": {
+										"baseType": {
+											"contractScope": null,
+											"id": 18,
+											"name": "Proposal",
+											"nodeType": "UserDefinedTypeName",
+											"referencedDeclaration": 11,
+											"src": "298:8:0",
+											"typeDescriptions": {
+												"typeIdentifier": "t_struct$_Proposal_$11_storage_ptr",
+												"typeString": "struct Ballot.Proposal"
+											}
+										},
+										"id": 19,
+										"length": null,
+										"nodeType": "ArrayTypeName",
+										"src": "298:10:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_array$_t_struct$_Proposal_$11_storage_$dyn_storage_ptr",
+											"typeString": "struct Ballot.Proposal[]"
+										}
+									},
+									"value": null,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 25,
+										"nodeType": "Block",
+										"src": "365:16:0",
+										"statements": []
+									},
+									"documentation": null,
+									"id": 26,
+									"implemented": true,
+									"isConstructor": true,
+									"isDeclaredConst": false,
+									"modifiers": [],
+									"name": "",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 23,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 22,
+												"name": "_numProposals",
+												"nodeType": "VariableDeclaration",
+												"scope": 26,
+												"src": "337:19:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint8",
+													"typeString": "uint8"
+												},
+												"typeName": {
+													"id": 21,
+													"name": "uint8",
+													"nodeType": "ElementaryTypeName",
+													"src": "337:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint8",
+														"typeString": "uint8"
+													}
+												},
+												"value": null,
+												"visibility": "internal"
+											}
+										],
+										"src": "336:21:0"
+									},
+									"payable": false,
+									"returnParameters": {
+										"id": 24,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "365:0:0"
+									},
+									"scope": 27,
+									"src": "325:56:0",
+									"stateMutability": "nonpayable",
+									"superFunction": null,
+									"visibility": "public"
+								}
+							],
+							"scope": 28,
+							"src": "25:359:0"
+						}
+					],
+					"src": "0:384:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
