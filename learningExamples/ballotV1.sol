@@ -1,6 +1,7 @@
 pragma solidity ^0.4.0;
 
 contract Ballot {
+
     /* Voter structure */
     struct Voter {
         uint weight; // Value of the vote
@@ -47,14 +48,14 @@ contract Ballot {
         proposals[toProposal].voteCount += sender.weight;
     }
 
-    function ballotInfo() public constant return (Proposal[] _proposals)
-
 
     function winningProposal() public constant returns (uint8 _winningProposal) {
         uint256 winningVoteCount = 0;
             for(uint8 prop = 0; prop < proposals.length; prop++){
-                if(proposals[prop].voteCount > winningVoteCount)
-                    _winningProposal = prop;    
+                if(proposals[prop].voteCount > winningVoteCount){
+                    winningVoteCount = proposals[prop].voteCount;  
+                    _winningProposal = prop;
+                }  
             }
         return _winningProposal;
     }
