@@ -75,9 +75,9 @@
 	},
 	"sources": {
 		"learningExamples/greeter.sol": {
-			"keccak256": "0xf75c3d6f97718930e61621b8bf89a7fce1dcb829dd20345b831aa6fc4673b3df",
+			"keccak256": "0x7e1ca4719c51e6651bae9c76614f71739a0d134d40af91b897d23565d8fc9e16",
 			"urls": [
-				"bzzr://6aca7ea4b2edfefd1ac48e0f4524c46ea5af977548470d1d4d8d32b2c8d28910"
+				"bzzr://fc727403996d48fd3f44a53376d112a31721ed01d47aebad5132d4503d9581ef"
 			]
 		}
 	},

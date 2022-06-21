@@ -124,9 +124,9 @@
 	},
 	"sources": {
 		"learningExamples/coin.sol": {
-			"keccak256": "0xea7c38bf16cb304416184b8eb1563578d30bd42cf26a54ec6ce2c2d5a37f678c",
+			"keccak256": "0x37759839c664abca1acdbc8ad7ebae751c8d4c0cfddafc71f429c4710f16aa67",
 			"urls": [
-				"bzzr://7f199e8326c82e762e9568df908ccf3f0bc38fe83698111a7d758af9d6d4ab36"
+				"bzzr://70584dea27b4a3844a40bac2a0251e65f82d7de85d56e52ceb3b27e5dec69230"
 			]
 		}
 	},

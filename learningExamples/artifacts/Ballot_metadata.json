@@ -80,9 +80,9 @@
 	},
 	"sources": {
 		"learningExamples/ballotV1.sol": {
-			"keccak256": "0xa0cf74809672eb7440154e9f8aa602ece01760e69081dd0668f8a8f5adace931",
+			"keccak256": "0xb47afffd186f4fabbe2c7211ae01193914a338c9089151b16f1b5f3fd97950dd",
 			"urls": [
-				"bzzr://a3ac62edf983d9284e7bf912a31a177a1aa7ae80f7774bf8661e8c4977e01364"
+				"bzzr://0cfcc1c0381d8cac80dd479f14b115f04e37f4d156a901293294a6f54bfd87b8"
 			]
 		}
 	},

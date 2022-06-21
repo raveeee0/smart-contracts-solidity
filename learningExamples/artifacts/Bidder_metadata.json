@@ -106,9 +106,9 @@
 	},
 	"sources": {
 		"learningExamples/bidder.sol": {
-			"keccak256": "0xc0101f5a4a3c1760c284dbb5aeba77e1f02b1841f88bb645183091761141ec3a",
+			"keccak256": "0x932c502d8bb58e07fb469203b33674776e2f2891f22bcaac3de47b4e79c91e08",
 			"urls": [
-				"bzzr://f946d9b9d8eb587955bf838be6fcdec259c99905d0e3d949f261b11a33d81859"
+				"bzzr://6703df21aa1aeeb99d8ed58016ec82310aa9475fa329c7ccedb134b9d4540590"
 			]
 		}
 	},

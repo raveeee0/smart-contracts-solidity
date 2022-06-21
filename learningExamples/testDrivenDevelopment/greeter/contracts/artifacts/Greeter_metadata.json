@@ -60,10 +60,11 @@
 	},
 	"sources": {
 		"learningExamples/testDrivenDevelopment/greeter/contracts/Greeter.sol": {
-			"keccak256": "0xfc35d51ddec938ec33113f2d5d2988a588d8e3924c12a02634a767f6111d7ecb",
+			"keccak256": "0x53493273b6f5f1ba91314f05191da6cf42a4e42a1e64a83aa9ea3784465ef07a",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://229b1796ea94a74c3d863187836d1155b9875462c7effbd837e36f63d627ba43",
-				"dweb:/ipfs/QmUaDCbBDr6oGvtRFTjmcrDjNTwLAYhsEmLSbgxoHAHz9F"
+				"bzz-raw://afc08c8364ab9b108fb1369088d344bb2dc0dbebea8946ad2b7f96e9cfd1b73e",
+				"dweb:/ipfs/QmeucsFaRKgymNk8scmEbxGLqPVbEMUuQCwhnFmZgmdU2L"
 			]
 		}
 	},
