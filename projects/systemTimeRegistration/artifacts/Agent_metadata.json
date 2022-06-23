@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.4.26+commit.4563c3fc"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "authorized",
+						"type": "address"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "logStatus",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "authorized",
+						"type": "address[]"
+					}
+				],
+				"name": "registerMultiple",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "start",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "exit",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "lastInvoker",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "_id",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"name": "_success",
+						"type": "bool"
+					}
+				],
+				"name": "TrueFalse",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"systemTimeRegistration.sol": "Agent"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"systemTimeRegistration.sol": {
+			"keccak256": "0x2ac224264e7b1f849f13d3de343cf4a4da92f89e7f2fb95bb7a2d990652efe70",
+			"urls": [
+				"bzzr://f06c571e447b23800c033022a4a1586708d985266fa6f693d3bc73e253a72eba"
+			]
+		}
+	},
+	"version": 1
+}
