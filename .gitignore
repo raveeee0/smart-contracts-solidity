@@ -1,5 +1,5 @@
 .idea
 
-**/artifacts
+learningExamples/artifacts
 
-**/**/artifacts
+projects/**/artifacts
